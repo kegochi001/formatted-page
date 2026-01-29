@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning Plan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Frank's Learning Plan</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Table of Contents will be inserted here dynamically -->
+        <div id="tableOfContents" class="toc-container"></div>
+        
+        <div class="about-section">
+            <h2 id="about-me">About Me</h2>
+            <p><strong>Name:</strong> Frank Momanyi</p>
+            <p><strong>School:</strong> Pan Africa Christian University</p>
+            <p><strong>Age:</strong> 22</p>
+            <p><strong>What I Do:</strong> Web Development Student</p>
+        </div>
+        
+        <!-- Modern Timeline Section -->
+        <div class="timeline-section" id="learning-timeline">
+            <h2>3-Month Software Engineering Bootcamp Learning Timeline</h2>
+            
+            <!-- Timeline Controls -->
+            <div class="timeline-controls">
+                <div class="view-toggle">
+                    <button id="tableViewBtn" class="active">Table View</button>
+                    <button id="cardViewBtn">Card View</button>
+                </div>
+                
+                <div class="search-filter">
+                    <input type="text" id="timelineSearch" placeholder="Search phases...">
+                    <select id="phaseFilter">
+                        <option value="all">All Phases</option>
+                        <option value="phase-1">Phase 1</option>
+                        <option value="phase-2">Phase 2</option>
+                        <option value="phase-3">Phase 3</option>
+                        <option value="phase-4">Phase 4</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Card View -->
+            <div id="cardView" class="card-view"></div>
+            
+            <!-- Table View -->
+            <div id="tableView" class="table-view active timeline-table-container">
+                <table class="modern-table" id="timelineTable">
+                    <thead>
+                        <tr>
+                            <th class="sortable" data-sort="phase">Phase <span class="sort-icon"></span></th>
+                            <th class="sortable" data-sort="duration">Duration <span class="sort-icon"></span></th>
+                            <th class="sortable" data-sort="focus">Focus Area <span class="sort-icon"></span></th>
+                            <th>Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Table rows will be inserted dynamically by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="goal-section" id="final-goal">
+            <h3>Final Goal:</h3>
+            <p>Become a job-ready junior software engineer by the end of 3 months</p>
+            <p>Build a complete Hotel Management System as my capstone project</p>
+        </div>
+        
+        <!-- Gallery Section -->
+        <div class="gallery-section" id="gallery">
+            <h2>Learning Journey Gallery</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will be added dynamically by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="contact-section" id="contact">
+            <h2>Contact Me via WhatsApp</h2>
+            <p>You can reach me on WhatsApp by clicking the link below:</p>
+            
+            <a href="https://wa.me/0111319831" 
+               class="whatsapp-link">
+                Click here to message me on WhatsApp
+            </a>
+            
+            <p>Or scan this QR code with your WhatsApp:</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/0111319831s" 
+                 alt="WhatsApp QR Code" 
+                 class="qr-code" 
+                 width="150" 
+                 height="150">
+        </div>
+    </div>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">❮</button>
+            <img class="lightbox-img" id="lightboxImage" src="" alt="">
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">❯</button>
+            <div class="gallery-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+    
+    <footer>
+        <p>My comprehensive HTML page practice</p>
+        <p>&copy; 2026 Frank Momanyi. All rights reserved.</p>
+    </footer>
+     <script src="script.js"></script>
+
+</body>
+</html>
